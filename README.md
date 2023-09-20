@@ -1,7 +1,11 @@
 # Portworx
-# OUTPUT
+
 Exporting Sharedv4 volumes externally outside kubernetes cluster nodes
-[root@master-node ~]# ./nfs-mounter.sh 
+
+```
+[root@master-node ~]# ./nfs-mounter.sh
+```
+```
 NAME                 PROVISIONER                     RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
 export-sharedv4-sc   kubernetes.io/portworx-volume   Delete          Immediate           false                  21m
 
@@ -19,3 +23,4 @@ Use the following information and commands to mount the sharedv4 Portworx volume
   1. Create a mount point directory for example, mkdir /mnt/Portworx_NFS_Mount
   2. mount -t nfs 70.0.71.13:/var/lib/osd/pxns/780959580385042137 /mnt/Portworx_NFS_Mount
   3. Verify mount df -hP /mnt/Portworx_NFS_Mount
+```
